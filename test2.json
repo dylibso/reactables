@@ -1,0 +1,6 @@
+{
+  "view": "function App(props) { return <h1>Hello, {props.toWhat}</h1>; }",
+  "props": {
+    "toWhat": "World!"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "react-sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node esbuild.js && extism-js dist/index.js -i src/index.d.ts -o dist/plugin.wasm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.19.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.2.2",
+    "@react-pdf/renderer": "^3.1.12",
+    "react-dom": "^18.2.0",
+    "react-tools": "^0.13.3"
+  }
+}
