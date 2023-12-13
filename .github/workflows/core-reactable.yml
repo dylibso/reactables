@@ -6,10 +6,15 @@ on:
 jobs:
   get-extism:
     runs-on: ubuntu-latest
+    env:
+      TAG: v1.0.0-rc3
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
           repository: extism/js-pdk
-      - run: sh install.sh
+      - run: curl -L -O "https://github.com/extism/js-pdk/releases/download/$TAG/extism-js-x86_64-linux-$TAG.gz"
+      - run: gunzip extism-js*.gz
+      - run: sudo mv extism-js-* /usr/local/bin/extism-js
+      - run: chmod +x /usr/local/bin/extism-js
       - run: extism-js
