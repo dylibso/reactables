@@ -4,11 +4,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  check-bats-version:
+  get-extism:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/checkout@v4
         with:
           repository: extism/js-pdk
-      - run: cat README.md
+      - run: sh install.sh
+      - run: extism-js
