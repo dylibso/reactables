@@ -1,4 +1,4 @@
-# Reactables
+![Reactables](.github/images/reactables-logo.png)
 
 ## Shrinkwrapped, portable and secure React components
 
