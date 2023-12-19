@@ -1,6 +1,0 @@
-{
-  "view": "class Hello extends React.Component {\n render() {\n return React.createElement('div', null, `Hello ${this.props.toWhat}`); }\n }\n return Hello",
-  "props": {
-    "toWhat": "World!"
-  }
-}
