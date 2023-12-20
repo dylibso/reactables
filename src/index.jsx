@@ -20,7 +20,7 @@ export function compileTemplate() {
 
 export function render() {
   const { name, props } = JSON.parse(Host.inputString())
-  const code = Var.get(`template-${name}`)
+  const code = Var.getString(`template-${name}`)
   let view = reactTools.transform(code, {}) + '; return App'
   let [globalKeys, globalRefs] = getGlobals()
   globalKeys.push('React')
