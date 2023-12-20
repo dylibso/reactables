@@ -1,9 +1,16 @@
-# Reactables
+<p align="center">
+  <img src=".github/assets/reactables-wasm.png" height="280px">
+  <p align="center">React renderer for creating PDF files on the browser and server<p>
+</p>
 
-## Shrinkwrapped, portable and secure React components
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-wasm.png">
+    <img alt="WebAssembly Observability - Observe SDK by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
+</picture>
 
-Reactables are “react-in-a-box”. They enable you to bring the power of React and JSX to other languages. 
-Consume and use them in your programming language of choice. Render from within.
+# Shrinkwrapped, portable and secure React components
+
+Reactables enable you to bring the power of React and JSX to other programming languages. 
 
 
 ### How it Works
