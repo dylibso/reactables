@@ -29,7 +29,7 @@ previously built components, and you pass in props (e.g. subscription data) and 
 <p align="left">
  <picture>
       <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-diagram.png">
-      <img alt="Reactables by Dylibso" width="65%" src=".github/assets/reactables-diagram.png">
+      <img alt="Reactables by Dylibso" width="100%" src=".github/assets/reactables-diagram.png">
   </picture>
 </p>
 
