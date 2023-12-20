@@ -3,7 +3,7 @@ import json
 
 manifest = {
     "wasm": [
-        { "url": "https://github.com/dylibso/reactables/releases/download/latest/reactable.core.wasm" }
+        { "url": "https://github.com/dylibso/reactables/releases/latest/download/reactable.core.wasm" }
     ]
 }
 reactable = extism.Plugin(manifest, wasi=True)
