@@ -6,9 +6,24 @@
 </p>
 <h1 style="text-align: center;">Shrinkwrapped, portable and secure React components</h1>
 
- ## Why Reactables?
+**Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and run JSX templates
+securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!**
 
-**Reactables enable SaaS platforms to bring React and JSX to programming languages (other than JavaScript) for true templating power.**
+<p align="left">
+ <picture>
+      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-diagram.png">
+      <img alt="Reactables by Dylibso" width="100%" src=".github/assets/reactables-diagram.png">
+  </picture>
+</p>
+
+## Features
+- Run arbritrary JavaScript / JSX in your code **securely**!
+- Suport for over 15 different host programming languages
+- Incorporate all of your favorite tooling, styling, and NPM packages
+- Package up a full blown JSX app using ESBuild or Webpack
+- Build and distribute new Reactables. They're customizable and portable!
+
+ ## Why Reactables?
 
 Users need the power to customize SaaS platform offerings such as emails, PDFs and other artifacts, so vendors often turn to templating
 languages to provide this capability, but most of the host-language agnostic templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today are not ideal for the following reasons:
@@ -26,23 +41,9 @@ Enter Reactables! With Reactables, you can now compile and render React/JSX safe
 Your customer writes a React.Component, packages it up with all of their own dependencies, including any 
 previously built components, and you pass in props (e.g. subscription data) and render it. Voila!
 
-<p align="left">
- <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-diagram.png">
-      <img alt="Reactables by Dylibso" width="100%" src=".github/assets/reactables-diagram.png">
-  </picture>
-</p>
-
-## Features
-- Run arbritrary JavaScript / JSX in your code **securely**!
-- Suport for over 15 different host programming languages including Python, Go, Java, Ruby, PHP, etc.
-- Incorporate all of your favorite tooling, styling, and NPM packages
-- Package up a full blown JSX app using ESBuild or Webpack
-- Build and distribute new Reactables. They're customizable and portable!
-
 ## Ready to Consume
 
-Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment. [Or create your own!](build-your-own-reactable!)
+Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment. [Or create your own!](#build-your-own-reactable!)
 
 ### Reactable Core
 Provides a foundational module with React packaged up and ready to go. 
@@ -108,6 +109,3 @@ template.
 
 Reactable Core can be extended to create new and novel Reactables that incorporate other components, styles, packages, etc.
 
-
-### Github Action
-Take a look at this Github Action to aid in your building of new Reactables
