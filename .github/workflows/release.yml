@@ -1,0 +1,44 @@
+on:
+  workflow_dispatch:
+  release:
+    types: [created]
+
+jobs:
+  release:
+    env:
+      EXTISM_JS_TAG: v1.0.0-rc3
+    name: Build and Release Reactables
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup wasm-merge
+        run: |
+          curl -L https://github.com/WebAssembly/binaryen/releases/download/version_116/binaryen-version_116-x86_64-linux.tar.gz > binaryen.tar.gz
+          tar xvzf binaryen.tar.gz
+          sudo cp binaryen-version_116/bin/wasm-merge /usr/local/bin
+          sudo cp binaryen-version_116/bin/wasm-opt /usr/local/bin  
+          wasm-merge --version
+
+      - name: Setup Extism JS-PDK
+        run: |
+          curl -L -O "https://github.com/extism/js-pdk/releases/download/$TAG/extism-js-x86_64-linux-$EXTISM_JS_TAG.gz"
+          gunzip extism-js*.gz
+          sudo mv extism-js-* /usr/local/bin/extism-js
+          chmod +x /usr/local/bin/extism-js
+          extism-js --version
+
+      - name: Build
+        run: |
+          npm i
+          npm run build
+          cp dist/plugin.wasm ./reactable.core.wasm
+
+      - name: Upload Artifact to Release
+        uses: softprops/action-gh-release@v1
+        with:
+          if-no-files-found: error
+          files: |
+            *.wasm
+        if: startsWith(github.ref, 'refs/tags/')
