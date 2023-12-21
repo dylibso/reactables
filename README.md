@@ -4,10 +4,44 @@
       <img alt="Reactables by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
   </picture>
 </p>
-<h1 style="text-align: center;">Shrinkwrapped, portable and secure React components</h1>
+<h1 style="text-align: center;">Shrinkwrapped Portable, <span>&#38;</span> Secure React Components</h1>
 
 **Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
 securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!**
+
+## Example (Render Components from Python)
+
+```python
+import extism
+import json
+
+plugin_url = "https://github.com/dylibso/reactables/releases/latest/download/reactable.core.wasm"
+manifest = { "wasm": [ { "url": plugin_url } ] }
+reactable = extism.Plugin(manifest, wasi=True)
+
+# Take our JSX code as a string
+jsx_code = """
+function App(props) {
+  return <h1>Hello, {props.customerName}!</h1>
+}
+"""
+
+# Compile the template and register it by name
+reactable.call('compileTemplate', json.dumps({
+            "name": "greeting-template",
+            "code": code,
+            }))
+
+# Render template by name, passing in some props
+props = { "customerName": "Benjamin" }
+html = reactable.call('render', json.dumps({
+            "props": props,
+            "name": "greeting-template"
+            }))
+
+print(html)
+# <h1>Hello, Benjamin!</h1>
+```
 
 <p align="left">
  <picture>
