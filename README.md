@@ -11,8 +11,8 @@
 
 </div>
 
-Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
-securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!
+Reactables bring the power of React and JSX outside of the JavaScript ecosystem.
+Compile and render JSX templates securly from over 15 different programming languages including Python, Go, Java, Ruby, Dotnet, PHP, and more!
 
 <p align="left">
  <picture>
@@ -23,33 +23,34 @@ securly from over 15 different programming languages including Python, Go, Java,
 
 ## Why Reactables?
 
-There are many host-language agnostic templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today, but most are not ideal for the following reasons:
+There are many embeddable templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today, but most are not ideal for the following reasons:
 
-- They lack expressivity (ie. not Turing-complete languages)
+- They lack expressivity and complexity turns messy (ie. non Turing-complete languages)
 - They can be unfamiliar to many users and come with a non-zero learning curve
 - They require users to leave all of their pre-built components behind and start from scratch
 - They are incompatible with popular web development tools (e.g. Webpack, ESBuild, etc.)
 
-In an ideal world, React/JSX could be used as a general purpose template engine/language and all of the above limitiations would fade
+In an ideal world, React/JSX could be used as a general purpose template engine and all of the above limitiations would fade
 away, but alas:
-- The entire ecosystem is JavaScript only. What if your code base is written in something else?
-- What if you need to render arbitrary JSX provide by a third party? That's not very secure...
 
-Enter Reactables! With Reactables, you can now compile and render React/JSX **safely** from within your programming language of choice via the power of WebAssembly (Wasm).
+- You can only embed in JavaScript. What if your code base is written in something else or you have multiple languages?
+- What if your JSX templates are provided by a third party? That's not very secure...
+
+These happen to be the two primary problems that [Extism](https://extism.org) aims to solve.
+Reactables is built with [Extism](https://extism.org), so you can now compile and render React/JSX **safely** from within your programming language of choice.
 
 ## Use Cases
 
 1. Your entire codebase is written in `<any_language_other_than_JavaScript>` but you really want/need to render templates with JSX
-
 2. You're a SaaS platform and you want to give your customers the ability to customize various artifacts and touch points such as hosted pages, emails, and PDFs. 
 
 ## Features
 
 - Run arbritrary JavaScript / JSX in your code **securely**!
 - Suport for over 15 different host programming languages
-- Incorporate all of your favorite tooling, styling, and NPM packages
+- Incorporate your favorite tooling, styling, and NPM packages (experimental)
 - Package up a full blown JSX app using ESBuild or Webpack
-- Build and distribute new Reactables. They're customizable and portable!
+- Build and distribute new Reactables from your component library. They're customizable and portable!
 
 ## Ready to Consume
 
@@ -57,7 +58,6 @@ Enter Reactables! With Reactables, you can now compile and render React/JSX **sa
 a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/concepts/plug-in) that embeds React and other dependencies along with an interface to compile JSX templates and render them with supplied props. 
 
 - **Reactable Core** provides a foundational plugin with React securely embedded to provide the core JSX compilation and rendering capabilities. Get it [here](https://github.com/dylibso/reactables/releases)
-
 
 ### Coming Soon
 - **Reactable Email** extends Reactable Core with components from [react-email](https://github.com/resendlabs/react-email) 
