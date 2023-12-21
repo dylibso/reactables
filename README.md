@@ -4,7 +4,7 @@
       <img alt="Reactables by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
   </picture>
 </p>
-<h1 style="text-align: center;">Shrinkwrapped, portable and secure React components</h1>
+<h1 style="text-align: center;">Shrinkwrapped, Portable, <span>&#38;</span> Secure React Components</h1>
 
 **Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
 securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!**
@@ -59,44 +59,42 @@ a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/c
 4. Call the `render` function with your props
 5. Voila!
 
-## Example
+## Example (Render Components from Python)
 
-The following example embeds Reactable Core in a Ruby program to render a simple a JSX template with a customer name property. 
+The following example embeds Reactable Core in a Python program to render a simple a JSX template with a customer name property. 
 
-```ruby
-require "extism"
 
-url = "https://github.com/extism/reactables/releases/latest/download/reactable.core.wasm"
-manifest = Extism::Manifest.from_url url
-reactable = Extism::Plugin.new(manifest)
+```python
+import extism
+import json
 
-jsx_code = <<-JSX
-export function App(props) {
-  return <h1>Hello {props.customerName}!</h1>
+plugin_url = "https://github.com/dylibso/reactables/releases/latest/download/reactable.core.wasm"
+manifest = { "wasm": [ { "url": plugin_url } ] }
+reactable = extism.Plugin(manifest, wasi=True)
+
+# Take our JSX code as a string
+jsx_code = """
+function App(props) {
+  return <h1>Hello, {props.customerName}!</h1>
 }
-JSX
+"""
 
-# compile our JSX template
-reactables.call('compileTemplate',
-  JSON.generate(
-    name: "greeting-template",
-    code: jsx_code,
-    isJSX: true
-  )
-)
+# Compile the template and register it by name
+reactable.call('compileTemplate', json.dumps({
+            "name": "greeting-template",
+            "code": code,
+            }))
 
-# Render with customer specific props
-html = reactables.call('render',
-  JSON.generate(
-    templateName: "greeting-template",
-    props: { customerName: "Benjamin" },
-  )
-)
+# Render template by name, passing in some props
+props = { "customerName": "Benjamin" }
+html = reactable.call('render', json.dumps({
+            "name": "greeting-template",
+            "props": props,
+            }))
 
-puts html
-# => <h1>Hello Benjamin!</h1>
+print(html)
+# <h1>Hello, Benjamin!</h1>
 ```
-
 
 ## Build your own 
 
