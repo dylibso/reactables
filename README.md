@@ -53,10 +53,13 @@ Enter Reactables! With Reactables, you can now compile and render React/JSX **sa
 
 ## Ready to Consume
 
-**Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment.** Each Reactable is implemented as 
+**Choose from pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment.** Each Reactable is implemented as 
 a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/concepts/plug-in) that embeds React and other dependencies along with an interface to compile JSX templates and render them with supplied props. 
 
-- **Reactable Core** provides a foundational plugin with React securely embedded to provide the core JSX compilation and rendering capabilities.
+- **Reactable Core** provides a foundational plugin with React securely embedded to provide the core JSX compilation and rendering capabilities. Get it [here](https://github.com/dylibso/reactables/releases)
+
+
+### Coming Soon
 - **Reactable Email** extends Reactable Core with components from [react-email](https://github.com/resendlabs/react-email) 
 - **Reactable PDF** extends Reactable Core  with components from [react-pdf](https://github.com/diegomura/react-pdf) 
 
