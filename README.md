@@ -82,7 +82,7 @@ function App(props) {
 # Compile the template and register it by name
 reactable.call('compileTemplate', json.dumps({
             "name": "greeting-template",
-            "code": code,
+            "code": jsx_code,
             }))
 
 # Render template by name, passing in some props
