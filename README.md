@@ -37,7 +37,7 @@ away, but alas:
 - What if your JSX templates are provided by a third party? That's not very secure...
 
 Enter Reactables! These happen to be the two primary problems that [Extism](https://extism.org) aims to solve.
-Reactables is built with [Extism](https://extism.org), so you can now compile and render React/JSX **safely** from within your programming language of choice.
+Reactables is distributed as an [Extism Plug-in](https://extism.org/docs/concepts/plug-in), so you can now compile and render React/JSX **safely** from within your programming language of choice.
 
 ## Use Cases
 
