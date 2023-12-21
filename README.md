@@ -35,8 +35,8 @@ reactable.call('compileTemplate', json.dumps({
 # Render template by name, passing in some props
 props = { "customerName": "Benjamin" }
 html = reactable.call('render', json.dumps({
+            "name": "greeting-template",
             "props": props,
-            "name": "greeting-template"
             }))
 
 print(html)
