@@ -4,7 +4,7 @@
       <img alt="Reactables by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
   </picture>
 </p>
-<h1 style="text-align: center;">Shrinkwrapped Portable, <span>&#38;</span> Secure React Components</h1>
+<h1 style="text-align: center;">Shrinkwrapped, Portable, <span>&#38;</span> Secure React Components</h1>
 
 **Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
 securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!**
