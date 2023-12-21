@@ -1,13 +1,18 @@
-<p align="center">
-  <picture>
-      <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-wasm.png">
-      <img alt="Reactables by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
-  </picture>
-</p>
-<h1 style="text-align: center;">Shrinkwrapped, Portable, <span>&#38;</span> Secure React Components</h1>
+<div align="center">
+    <p align="center">
+      <picture>
+          <source media="(prefers-color-scheme: dark)" srcset=".github/assets/reactables-wasm.png">
+          <img alt="Reactables by Dylibso" width="75%" style="max-width: 600px" src=".github/assets/reactables-wasm.png">
+      </picture>
+    </p>
+    <h1 style="text-align: center;">Shrinkwrapped, Portable, <span>&#38;</span> Secure React Components</h1>
+    
+[Why](#why-reactables) · [Use Cases](#use-cases) · [Usage](#usage) · [Request Feature](https://github.com/dylibso/reactables/issues/new)
 
-**Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
-securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!**
+</div>
+
+Reactables enable you to bring the power of React and JSX outside of the JavaScript ecosystem. Compile and render JSX templates
+securly from over 15 different programming languages including Python, Go, Java, Ruby, PHP, and more!
 
 <p align="left">
  <picture>
@@ -17,6 +22,7 @@ securly from over 15 different programming languages including Python, Go, Java,
 </p>
 
 ## Why Reactables?
+
 There are many host-language agnostic templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today, but most are not ideal for the following reasons:
 
 - They lack expressivity (ie. not Turing-complete languages)
@@ -31,13 +37,14 @@ away, but alas:
 
 Enter Reactables! With Reactables, you can now compile and render React/JSX **safely** from within your programming language of choice via the power of WebAssembly (Wasm).
 
-### Use Cases
+## Use Cases
 
 1. Your entire codebase is written in `<any_language_other_than_JavaScript>` but you really want/need to render templates with JSX
 
 2. You're a SaaS platform and you want to give your customers the ability to customize various artifacts and touch points such as hosted pages, emails, and PDFs. 
 
 ## Features
+
 - Run arbritrary JavaScript / JSX in your code **securely**!
 - Suport for over 15 different host programming languages
 - Incorporate all of your favorite tooling, styling, and NPM packages
@@ -45,6 +52,7 @@ Enter Reactables! With Reactables, you can now compile and render React/JSX **sa
 - Build and distribute new Reactables. They're customizable and portable!
 
 ## Ready to Consume
+
 **Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment.** Each Reactable is implemented as 
 a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/concepts/plug-in) that embeds React and other dependencies along with an interface to compile JSX templates and render them with supplied props. 
 
@@ -52,17 +60,18 @@ a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/c
 - **Reactable Email** extends Reactable Core with components from [react-email](https://github.com/resendlabs/react-email) 
 - **Reactable PDF** extends Reactable Core  with components from [react-pdf](https://github.com/diegomura/react-pdf) 
 
-## Basic Usage
+## Usage
+
 1. Include the appropriate [Extism SDK](https://extism.org/docs/quickstart/host-quickstart) into your application 
 2. Instantiate your Reactable of choice as a new Extism Plugin 
 3. Call the `compileTemplate` function with your JSX template
 4. Call the `render` function with your props
 5. Voila!
 
-## Example (Render Components from Python)
+### Example (Python)
 
 The following example embeds Reactable Core in a Python program to render a simple a JSX template with a customer name property. 
-
+See the [examples directory](examples/) for examples in more languages.
 
 ```python
 import extism
