@@ -45,31 +45,19 @@ Enter Reactables! With Reactables, you can now compile and render React/JSX **sa
 - Build and distribute new Reactables. They're customizable and portable!
 
 ## Ready to Consume
+**Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment.** Each Reactable is implemented as 
+a WebAssembly Module in the form of an [Extism Plugin](https://extism.org/docs/concepts/plug-in) that embeds React and other dependencies along with an interface to compile JSX templates and render them with supplied props. 
 
-Choose from three pre-built Reactables that are ready to go out-of-the-box for your immediate enjoyment. [Or create your own!](#build-your-own-reactable!)
+- **Reactable Core** provides a foundational plugin with React securely embedded to provide the core JSX compilation and rendering capabilities.
+- **Reactable Email** extends Reactable Core with components from [react-email](https://github.com/resendlabs/react-email) 
+- **Reactable PDF** extends Reactable Core  with components from [react-pdf](https://github.com/diegomura/react-pdf) 
 
-### Reactable Core
-Provides a foundational module with React packaged
-
-### Reactable Email 
-Brings in components from https://github.com/resendlabs/react-email to Reactable Core for customized email renderings
-
- ### Reactable PDF
-Brings in components from https://github.com/diegomura/react-pdf to Reactable Core for customized email renderings
-
-
-## Usage
-
-Reactables are implemented as WebAssembly Modules that embed React and JSX along with an interface for compiling and rendering the JSX 
-template.
-
-1. Include the appropriate Extism SDK into your application (Reactables are powered by a WebAssembly framework called)
-2. Instantiate your Reactable of choice and compile your JSX template
-4. Render the template with your data
-
-Your customer writes a React.Component, packages it up with all of their own dependencies, including any 
-previously built components, and you pass in props (e.g. subscription data) and render it. Voila!
-
+## Basic Usage
+1. Include the appropriate [Extism SDK](https://extism.org/docs/quickstart/host-quickstart) into your application 
+2. Instantiate your Reactable of choice as a new Extism Plugin 
+3. Call the `compileTemplate` function with your JSX template
+4. Call the `render` function with your props
+5. Voila!
 
 ## Example
 
