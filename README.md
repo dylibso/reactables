@@ -11,7 +11,7 @@
 
 </div>
 
-Reactables bring the power of React and JSX outside of the JavaScript ecosystem.
+Reactables bring the power of React and JSX to everyone's programming language of choice.
 Compile and render JSX templates securly from over 15 different programming languages including Python, Go, Java, Ruby, Dotnet, PHP, and more!
 
 <p align="left">
