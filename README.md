@@ -12,7 +12,7 @@
 </div>
 
 Reactables bring the power of React and JSX to everyone's programming language of choice.
-Compile and render JSX templates securly from over 15 different programming languages including Python, Go, Java, Ruby, Dotnet, PHP, and more!
+Compile and render JSX templates securely from over 15 different programming languages including Python, Go, Java, Ruby, Dotnet, PHP, and more!
 
 <p align="left">
  <picture>
@@ -36,7 +36,7 @@ away, but alas:
 - You can only embed in JavaScript. What if your code base is written in something else or you have multiple languages?
 - What if your JSX templates are provided by a third party? That's not very secure...
 
-These happen to be the two primary problems that [Extism](https://extism.org) aims to solve.
+Enter Reactables! These happen to be the two primary problems that [Extism](https://extism.org) aims to solve.
 Reactables is built with [Extism](https://extism.org), so you can now compile and render React/JSX **safely** from within your programming language of choice.
 
 ## Use Cases
