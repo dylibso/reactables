@@ -23,14 +23,14 @@ Compile and render JSX templates securely from over 15 different programming lan
 
 ## Why Reactables?
 
-There are many embeddable templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today, but most are not ideal for the following reasons:
+There are many embeddable templating languages (e.g., Handlebars.js, Mustache, Liquid, etc.) in the world today, but all suffer from a few shortcomings:
 
 - They lack expressivity and complexity turns messy (ie. non Turing-complete languages)
 - They can be unfamiliar to many users and come with a non-zero learning curve
 - They require users to leave all of their pre-built components behind and start from scratch
 - They are incompatible with popular web development tools (e.g. Webpack, ESBuild, etc.)
 
-In an ideal world, React/JSX could be used as a general purpose template engine and all of the above limitiations would fade
+In an ideal world, React/JSX could be used as a general purpose template engine and all of the above limitations would fade
 away, but alas:
 
 - You can only embed in JavaScript. What if your code base is written in something else or you have multiple languages?
